@@ -24,25 +24,25 @@ const handleUserInput = function (data) {
     clearInterval(interval);
     interval = setInterval(() => {
       connection.write("Move: up")
-    }, 100) 
+    }, 80) 
   }
   if (data === "a") {
     clearInterval(interval);
     interval = setInterval(() => {
       connection.write("Move: left")
-    }, 100) 
+    }, 80) 
   }
   if (data === "d") {
     clearInterval(interval);
     interval = setInterval(() => {
       connection.write("Move: right")
-    }, 100)  
+    }, 80)  
   }
   if (data === "s") {
     clearInterval(interval);
     interval = setInterval(() => {
       connection.write("Move: down")
-    }, 100)   
+    }, 80)   
   }
   if (data === '\u0003') {
     process.exit();

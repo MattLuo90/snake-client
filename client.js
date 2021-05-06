@@ -1,8 +1,9 @@
 const net = require("net");
+const { IP, PORT } = require("./constants");
 const connect = function () {
   const conn = net.createConnection({
-    host: '135.23.222.131',
-    port: '50542'
+    host: IP,
+    port: PORT
   });
 
   // interpret incoming data as text
@@ -12,7 +13,10 @@ const connect = function () {
     console.log("connected to snek server")
   })
   conn.on('connect', () => {
-    conn.write('Name: ML');
+    conn.write('Name: MLJ');
+  });
+  conn.on('connect', () => {
+    conn.write('Say: faster');
   });
    conn.on("data", (message) => {
     console.log(message);
